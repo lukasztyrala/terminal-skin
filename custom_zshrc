@@ -1,0 +1,17 @@
+# Custom prompt
+# %% is "%"
+# %) is ")"
+# %n is a username
+# %m, %M are machine host names
+# %# is a shell state. When it returs "#" it means running with privileges, and "%" means without. Often instead of sell state it is nice to end prompt with "$". Remember to put " " (space) after the last PROMPT element.
+# %? is a status of last command
+# %d or %/ or %~ is working directory. Integers specify trailing components; negative ones specify leading components; 0 means full path. The ~ option replaces $HOME with ~.
+# %D is yy-mm-dd, %T is time of day (24h) and %* includes seconds, %t or %@ for 12h format, %w is day-dd, %W is mm/dd/yy, and %D{strftime} allows to specify custom format
+# %B%b starts and stops bold, %F{number_or_name}%f starts and stops character color, %K{}%k is for background, %U%u is underline and %S%s is standout
+# More prompt expansions: https://zsh.sourceforge.io/Doc/Release/Prompt-Expansion.html#Prompt-Expansion
+
+# My current prompt preference using lt.terminal colors
+PROMPT="%F{8}%*%f %F{4}%.%f $ "
+
+# Aliases
+alias lst="ls -alhG"
